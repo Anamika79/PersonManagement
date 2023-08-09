@@ -1,0 +1,47 @@
+﻿@model PersonManagement.Models.Person
+
+@{
+    ViewData["Title"] = "Here are the details!!";
+}
+
+<style>
+    table {
+        width: 70%;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    td {
+        padding-left: 5px;
+    }
+</style>
+
+<h3>@ViewData["Title"]</h3>
+<table>
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>First Name</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>DOB</th>
+        <td>@Model.DOB.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>@Model.Address</td>
+    </tr>
+    <tr>
+        <th>Email Id</th>
+        <td>@Model.Email</td>
+    </tr>
+</table>

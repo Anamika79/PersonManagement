@@ -1,0 +1,18 @@
+﻿@model PersonManagement.Models.Person
+
+@{
+    ViewData["Title"] = "Search a person";
+}
+
+<h3>@ViewData["Title"]</h3>
+<hr />
+<form asp-controller="Person" asp-action="Found" method="get">
+    <div class="mb-3">
+        <label class="form-label">Enter the email id :  </label>
+        <input type="text" class="form-control" name="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
